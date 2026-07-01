@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>404 — Page Not Found | PhoolPatte</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --saffron: #E8651A;
+      --rose:    #C0392B;
+      --dark:    #1A1008;
+      --mid:     #5A4030;
+      --light:   #9A7A5A;
+      --cream:   #FFF8F0;
+      --border:  #E8D5C0;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+
+    .petal-bg {
+      position: fixed; inset: 0;
+      pointer-events: none; overflow: hidden; z-index: 0;
+    }
+    .petal-bg span {
+      position: absolute;
+      font-size: 2.5rem;
+      opacity: .07;
+      animation: floatPetal 12s infinite ease-in-out;
+    }
+    @keyframes floatPetal {
+      0%,100% { transform: translateY(0) rotate(0deg); }
+      50%      { transform: translateY(-30px) rotate(20deg); }
+    }
+
+    .card {
+      position: relative; z-index: 1;
+      background: #fff;
+      border-radius: 24px;
+      padding: 3rem 2.5rem;
+      max-width: 460px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(232,101,26,.12);
+      border: 1px solid var(--border);
+    }
+
+    .flower { font-size: 4.5rem; margin-bottom: 1rem; display: block; }
+
+    .num {
+      font-family: 'Playfair Display', serif;
+      font-size: 6rem;
+      font-weight: 700;
+      color: var(--saffron);
+      line-height: 1;
+      margin-bottom: .3rem;
+    }
+
+    h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      color: var(--dark);
+      margin-bottom: .6rem;
+    }
+
+    .sub {
+      color: var(--mid);
+      font-size: .92rem;
+      margin-bottom: .4rem;
+    }
+
+    .sub2 {
+      color: var(--light);
+      font-size: .82rem;
+      margin-bottom: 2rem;
+    }
+
+    .divider {
+      width: 60px; height: 3px;
+      background: linear-gradient(90deg, var(--saffron), var(--rose));
+      border-radius: 99px;
+      margin: 1rem auto;
+    }
+
+    .btn-wrap {
+      display: flex;
+      flex-direction: column;
+      gap: .75rem;
+      align-items: center;
+    }
+
+    button {
+      width: 240px;
+      padding: .75rem 1.5rem;
+      border-radius: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: .88rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: none;
+      transition: all .2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--saffron), var(--rose));
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(232,101,26,.3);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(232,101,26,.4); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--saffron);
+      border: 2px solid var(--saffron);
+    }
+    .btn-outline:hover { background: #FFF3E8; transform: translateY(-1px); }
+
+    .btn-wa {
+      background: #25D366;
+      color: #fff;
+      box-shadow: 0 4px 14px rgba(37,211,102,.3);
+    }
+    .btn-wa:hover { background: #1ebe5d; transform: translateY(-2px); }
+
+    .brand {
+      margin-top: 2rem;
+      font-size: .78rem;
+      color: var(--light);
+    }
+    .brand span { color: var(--saffron); font-weight: 600; }
+  </style>
+</head>
+<body>
+
+  <!-- Floating petal background -->
+  <div class="petal-bg">
+    <span style="left:8%;top:15%;animation-delay:0s">🌸</span>
+    <span style="left:80%;top:10%;animation-delay:2s">🌺</span>
+    <span style="left:5%;top:70%;animation-delay:4s">🌼</span>
+    <span style="left:88%;top:65%;animation-delay:1s">🏵️</span>
+    <span style="left:45%;top:5%;animation-delay:3s">💮</span>
+    <span style="left:50%;top:88%;animation-delay:5s">🌸</span>
+    <span style="left:25%;top:85%;animation-delay:2.5s">🌺</span>
+    <span style="left:70%;top:80%;animation-delay:1.5s">🌼</span>
+  </div>
+
+  <div class="card">
+    <span class="flower">🌸</span>
+    <div class="num">404</div>
+    <div class="divider"></div>
+    <h1>Page Not Found</h1>
+    <p class="sub">Yeh page abhi available nahi hai.</p>
+    <p class="sub2">The page you're looking for doesn't exist or may have moved.</p>
+
+    <div class="btn-wrap">
+      <button class="btn-primary" onclick="location.href='index.html'">🏠 Go to Home</button>
+      <button class="btn-outline" onclick="location.href='index.html#catalog'">🌸 Browse Catalog</button>
+      <button class="btn-wa" onclick="window.open('https://wa.me/919999999999?text=Namaste%20PhoolPatte!%20I%20need%20help.','_blank')">
+        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.549 4.1 1.51 5.829L.057 23.25a.75.75 0 00.916.99l5.57-1.463A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.898 0-3.686-.483-5.25-1.336l-.376-.214-3.894 1.023 1.04-3.792-.232-.389A9.945 9.945 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+        WhatsApp Us
+      </button>
+    </div>
+
+    <p class="brand">© 2025 <span>PhoolPatte</span> — Delhi NCR's Flower Shop</p>
+  </div>
+
+</body>
+</html>

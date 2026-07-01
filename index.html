@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhoolPatte — Flowers for Every Function | Delhi NCR</title>
+  <meta name="description" content="Delhi NCR's premium flower shop. Jaimala, Varmala, Phoolon ki Chadar, Flower Jewellery, Bulk Flowers & Function Decoration. Same-day delivery."/>
+  <meta property="og:title" content="PhoolPatte — Flowers for Every Function"/>
+  <meta property="og:description" content="Fresh flowers for Haldi, Mehendi, Shaadi & more. Delivery across Delhi NCR."/>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Kalam:wght@400;700&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+  <nav id="navbar"></nav>
+  <div id="app"></div>
+
+  <!--
+    SCRIPT LOAD ORDER (do not change):
+    0. config.js  — credentials (WA number, Instagram, Cloudinary) — KEEP PRIVATE
+    1. data.js    — all products, categories, images, chatbot KB
+    2. state.js   — cart, wishlist, likes, phone number (localStorage)
+    3. ui.js      — navbar, phone gate, product modal, chatbot, card HTML
+    4. pages.js   — every page render function
+    5. router.js  — navigation (must be last)
+  -->
+  <script src="js/config.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/state.js"></script>
+  <script src="js/ui.js"></script>
+  <script src="js/pages.js"></script>
+  <script src="js/router.js"></script>
+
+  <script>
+    // Boot the app
+    Router.init();
+  </script>
+</body>
+</html>
